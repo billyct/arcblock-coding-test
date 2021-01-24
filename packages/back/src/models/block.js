@@ -57,6 +57,10 @@ class Block extends Base{
   transactions({page = 1}) {
     const perPage = 10
 
+    if (page < 1) {
+      return []
+    }
+
     const start = (page - 1) * perPage
     let end = start + perPage
 
