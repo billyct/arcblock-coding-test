@@ -27,22 +27,22 @@ describe('test /graphql', () => {
   it('should getBlock correct', async () => {
     const res = await request.post('/graphql')
       .send({
-        query: `{block(hash: "hash"){ver, tx(page: 1){__typename}}}`,
+        query: `{block(hash: "hash"){version, transactions(page: 1){__typename}}}`,
       })
 
     expect(res.statusCode).toBe(200)
-    expect(res.body.data.block.ver).toBe(1)
-    expect(res.body.data.block.tx.length).toBe(10)
+    expect(res.body.data.block.version).toBe(1)
+    expect(res.body.data.block.transactions.length).toBe(10)
   })
 
   it('should tx pagination correct', async () => {
     const res = await request.post('/graphql')
       .send({
-        query: `{block(hash: "hash"){tx(page: 2){__typename}}}`,
+        query: `{block(hash: "hash"){transactions(page: 2){__typename}}}`,
       })
 
     expect(res.statusCode).toBe(200)
-    expect(res.body.data.block.tx.length).toBe(3)
+    expect(res.body.data.block.transactions.length).toBe(3)
   })
 
   it('should return error message: Invalid Block Hash', async ()=> {
@@ -52,7 +52,7 @@ describe('test /graphql', () => {
 
     const res = await request.get('/graphql')
       .send({
-        query: `{block(hash: "0"){ver}}`,
+        query: `{block(hash: "0"){version}}`,
       })
 
     expect(res.statusCode).toBe(200)

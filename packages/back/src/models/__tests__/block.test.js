@@ -1,47 +1,75 @@
 const {Block} = require('../block')
 
-describe('test Block', () => {
-  it('should init correct', () => {
+describe('test Block class', () => {
 
-    const data = {
-      k1: 'v1',
-      k2: 'v2',
+  describe.each([
+    ['hash'],
+    ['height'],
+    ['weight'],
+    ['size'],
+    ['time'],
+    ['bits'],
+    ['fee'],
+    ['nonce'],
+    ['mrklRoot', 'mrkl_root'],
+    ['version', 'ver'],
+    ['transactionsCount', 'n_tx'],
+  ])(`%s attribute`,(key, keyOrigin) => {
+    it(`should return correctly`, () => {
+      const value = 'some value'
+      const block = new Block({
+        [keyOrigin || key]: value,
+      })
+      expect(block[key]).toEqual(value)
+    })
+
+    if (key === 'fee') {
+      it('should return string', function () {
+        expect(new Block({fee: 5000000}).fee).toEqual('5000000')
+      })
     }
-
-    const block = new Block(data)
-
-    expect(block.data).toEqual(data)
-    expect(block.k1).toBe(data.k1)
-    expect(block.k2).toBe(data.k2)
-    expect(block.perPage).toBe(10)
   })
 
-  describe('tx(page)', () => {
+  test('reward attribute should return correctly', () => {
+    const value = 5000000
+    const block = new Block({
+      tx: [
+        {
+          out: [
+            {
+              value,
+            }
+          ]
+        }
+      ]
+    })
+
+    expect(block.reward).toEqual(value.toString())
+  })
+
+  describe('test transactions(page) function', () => {
     it('should return []', function () {
       const block = new Block({})
-      expect(block.tx({})).toEqual([])
-      expect(block.tx({page: 2})).toEqual([])
+      expect(block.transactions({})).toEqual([])
+      expect(block.transactions({page: 2})).toEqual([])
     })
 
-    it('should return [] too', function () {
-      const block = new Block({
-        tx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-      })
-      expect(block.tx({page: 2})).toEqual([])
+    it('should return [] with large number page', function () {
+      const block = new Block({tx: []})
+      expect(block.transactions({page: 2})).toEqual([])
     })
 
-    it('should return [1,2]', function () {
-      const block = new Block({
-        tx: [1, 2]
-      })
-      expect(block.tx({page: 1})).toEqual([1, 2])
+    it('should return [] with negative number page', function () {
+      const block = new Block({})
+      expect(block.transactions({page: -1})).toEqual([])
     })
 
-    it('should return [1,2]', function () {
+    it('should return correctly', function () {
       const block = new Block({
         tx: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2]
       })
-      expect(block.tx({page: 2})).toEqual([1, 2])
+      expect(block.transactions({}).length).toEqual(10)
+      expect(block.transactions({page: 2}).length).toEqual(2)
     })
   })
 })
