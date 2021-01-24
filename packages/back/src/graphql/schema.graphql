@@ -1,0 +1,55 @@
+type Query {
+    block(hash: String!): Block
+}
+
+type Block {
+    hash: String
+    mrklRoot: String
+    version: Int
+    time: Int
+    bits: Int
+    fee: String
+    reward: String
+    nonce: Int
+    size: Int
+    height: Int
+    weight: Int
+    transactionsCount: Int
+    transactions(page: Int!): [Transaction]
+}
+
+type Transaction {
+    hash: String
+    time: Int
+    fee: String
+    inputsCount: Int
+    inputsValueCount: String
+    inputs: [Input]
+    outputsCount: Int
+    outputsValueCount: String
+    outputs: [Output]
+}
+
+union Input = CoinbaseInput | TransactionInput
+
+type CoinbaseInput {
+    isCoinbaseInput: Boolean
+}
+
+type TransactionInput {
+    value: String
+    addr: String
+    spent: Boolean
+}
+
+union Output = TransactionOutput | OpReturnOutput
+
+type OpReturnOutput{
+    isOpReturnOutput: Boolean
+}
+
+type TransactionOutput {
+    value: String
+    addr: String
+    spent: Boolean
+}

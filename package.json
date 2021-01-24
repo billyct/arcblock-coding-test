@@ -1,0 +1,17 @@
+{
+  "name": "arcblock-coding-test",
+  "private": true,
+  "main": "packages/back/index.js",
+  "scripts": {
+    "start": "lerna run start",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "postinstall": "lerna bootstrap",
+    "clean": "rm -rf .blocklet build",
+    "bundle": "yarn clean && yarn build && blocklet bundle --zip --create-release",
+    "deploy": "yarn bundle && blocklet deploy .blocklet/bundle"
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
