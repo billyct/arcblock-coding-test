@@ -3,9 +3,9 @@
   "private": true,
   "main": "packages/back/index.js",
   "scripts": {
-    "start": "lerna run start",
-    "build": "lerna run build",
-    "test": "lerna run test",
+    "start": "lerna run start --stream",
+    "build": "lerna run build --stream",
+    "test": "lerna run test --stream",
     "postinstall": "lerna bootstrap",
     "clean": "rm -rf .blocklet build",
     "bundle": "yarn clean && yarn build && blocklet bundle --zip --create-release",
