@@ -24,14 +24,6 @@ const Block = () => {
       <BlockTransactions/>
     </>
   )
-
-  // const {loading, error, data} = useQuery(`
-  // getBlock(hash: $hash) {
-  //   hash
-  //
-  // }
-  // `)
-
 }
 
 export default Block

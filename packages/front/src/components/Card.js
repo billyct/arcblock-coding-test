@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import cn from 'classnames'
 
 const Card = ({title, children, className}) => (
@@ -10,5 +11,9 @@ const Card = ({title, children, className}) => (
     </div>
   </div>
 )
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+}
 
 export default Card

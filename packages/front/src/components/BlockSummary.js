@@ -1,8 +1,8 @@
 import Card from './Card'
+import Hash from './Hash'
 import SummaryItem from './SummaryItem'
 import useBlock from '../hooks/useBlock'
 import {btcString, formatTime} from '../utils'
-import Hash from './Hash'
 
 const BlockSummary = () => {
   const {block} = useBlock()

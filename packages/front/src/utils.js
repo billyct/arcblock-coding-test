@@ -18,3 +18,14 @@ export const btcString = v => {
 }
 
 export const formatTime = v => format(fromUnixTime(v), 'yyyy-MM-dd HH:mm:ss')
+
+export const copyText = text => {
+  const ipt = document.createElement('input')
+  ipt.value = text
+  document.body.appendChild(ipt)
+  ipt.select()
+
+  document.execCommand('copy')
+
+  ipt.remove()
+}

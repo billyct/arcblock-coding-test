@@ -1,9 +1,11 @@
 import {useState, useEffect} from 'react'
+import PropTypes from 'prop-types'
 
 import Tooltip from './Tooltip'
 import {ReactComponent as ClipboardIcon} from '../assets/clipboard.svg'
+import {copyText} from '../utils'
 
-const CopyButton = ({text, ...props}) => {
+const CopyButton = ({text}) => {
   const COPY_TEXT = 'Copy Hash'
   const COPIED_TEXT = 'Copied'
 
@@ -20,14 +22,7 @@ const CopyButton = ({text, ...props}) => {
   },[timer])
 
   const handleClick = () => {
-    const ipt = document.createElement('input')
-    ipt.value = text
-    document.body.appendChild(ipt)
-    ipt.select()
-
-    document.execCommand('copy')
-
-    ipt.remove()
+    copyText(text)
     // say copied
     setTooltipContent(COPIED_TEXT)
     setShow(true)
@@ -42,17 +37,26 @@ const CopyButton = ({text, ...props}) => {
     <Tooltip
       show={show}
       content={toolTipContent}
+      data-testid='CopyButton__Tooltip'
     >
       <button
+        data-testid='CopyButton__button'
         onClick={handleClick}
         onMouseEnter={() => setShow(true)}
         onMouseLeave={() => setShow(false)}
-        {...props}
       >
         <ClipboardIcon width={14} height={14}/>
       </button>
     </Tooltip>
   )
+}
+
+CopyButton.propTypes = {
+  text: PropTypes.string,
+}
+
+CopyButton.defaultProps = {
+  text: '',
 }
 
 export default CopyButton

@@ -1,4 +1,4 @@
-import {useRoute, useLocation} from 'wouter'
+import {useLocation} from 'wouter'
 
 import {ReactComponent as PrevIcon} from '../assets/prev.svg'
 import IconButton from './IconButton'

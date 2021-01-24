@@ -13,7 +13,7 @@ const BlockHash = () => {
   return (
     <Card title='Block Hash'>
       <div className='flex items-center'>
-        <span className='text-sm mr-2 break-all'>{block.hash}</span>
+        <span className='text-sm mr-2 break-all' data-testid='BlockHash__span'>{block.hash}</span>
         <CopyButton text={block.hash}/>
       </div>
     </Card>
