@@ -1,9 +1,13 @@
 import Card from './Card'
 import TransactionItem from './TransactionItem'
+import Loading from './Loading'
+import Paginate from './Paginate'
 import useBlock from '../hooks/useBlock'
+import useTransactions from '../hooks/useTransactions'
 
 const BlockTransactions = () => {
   const {block} = useBlock()
+  const {transactions} = useTransactions()
 
   if (!block) {
     return null
@@ -14,12 +18,20 @@ const BlockTransactions = () => {
       title={`Transactions (${block.transactionsCount})`}
       className='-mx-6'
     >
-      {block.transactions.map(transaction => (
-        <TransactionItem
-          key={`transactions_${transaction.hash}`}
-          transaction={transaction}
-        />
-      ))}
+      {
+        transactions
+        ? (
+            transactions.map(transaction => (
+              <TransactionItem
+                key={`transactions_${transaction.hash}`}
+                transaction={transaction}
+              />
+            ))
+          )
+        : <Loading/>
+      }
+
+      <Paginate/>
     </Card>
   )
 }

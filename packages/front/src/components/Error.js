@@ -10,8 +10,8 @@ const Error = ({children}) => (
     </div>
     <div className='text-sm mt-10'>
       There are some links maybe helpful:
-      <Link href='/'>
-        <a className='ml-2 text-blue-500'>Explorer</a>
+      <Link href='/' className='ml-2 text-blue-500'>
+        Explorer
       </Link>
     </div>
   </div>

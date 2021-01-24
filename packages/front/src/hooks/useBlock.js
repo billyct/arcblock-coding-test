@@ -1,18 +1,21 @@
-import {useRoute} from 'wouter'
 import useSWR from 'swr'
 
+import useBlockRouteParams from './useBlockRouteParams'
 import {blockQuery} from '../queries'
 
 const useBlock = () => {
-  const [, params] = useRoute("/block/:hash")
-  const {hash} = params
+  const {hash} = useBlockRouteParams()
 
-  const {data, error} = useSWR(blockQuery(hash))
-  const block = data ? data.block : undefined
+  const {data, ...rest} = useSWR(blockQuery(hash))
+  let block = undefined
+
+  if (data) {
+    block = data.block
+  }
 
   return {
     block,
-    error,
+    ...rest,
   }
 }
 

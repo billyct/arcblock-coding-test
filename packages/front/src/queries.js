@@ -1,4 +1,4 @@
-export const blockQuery = (hash, txPage = 1) => `
+export const blockQuery = (hash) => `
 {
   block(hash: ${JSON.stringify(hash)}) {
     hash
@@ -13,7 +13,14 @@ export const blockQuery = (hash, txPage = 1) => `
     mrklRoot
     version
     transactionsCount
-    transactions(page: ${txPage}) {
+  }
+}
+`
+
+export const transactionsQuery = (hash, page) => `
+{
+  block(hash: ${JSON.stringify(hash)}) {
+    transactions(page: ${page}) {
       hash
       time
       fee
@@ -47,5 +54,3 @@ export const blockQuery = (hash, txPage = 1) => `
   }
 }
 `
-
-// export const txQuery = ()
