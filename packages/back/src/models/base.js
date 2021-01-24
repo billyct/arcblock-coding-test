@@ -1,7 +1,7 @@
 const get = require('lodash/get')
 
 class Base {
-  constructor(data) {
+  constructor(data = {}) {
     this.data = data
   }
 
