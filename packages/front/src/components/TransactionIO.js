@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 
 import TransactionSpent from './TransactionSpent'
-import {btcString} from '../utils'
 import Hash from './Hash'
+import {btcString} from '../utils'
 
 const TransactionIO = ({data}) => (
   <div className='flex justify-between py-2'>

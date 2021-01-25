@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Search Component snapshot should correct 1`] = `
+<div>
+  <div
+    class="w-full border border-gray-300 leading-loose flex rounded shadow-sm h-12 overflow-hidden hover:shadow search_classname"
+  >
+    <div
+      class="flex-1 relative"
+    >
+      <search-input-component
+        data-testid="Search__SearchInput"
+        placeholder="Search a block hash"
+        value=""
+      />
+      <clear-button-component
+        classname="hidden"
+        data-testid="Search__ClearButton"
+      />
+    </div>
+    <search-button-component
+      classname=""
+      data-testid="Search__SearchButton"
+    />
+  </div>
+</div>
+`;

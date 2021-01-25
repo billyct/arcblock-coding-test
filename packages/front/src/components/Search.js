@@ -41,6 +41,7 @@ const Search = ({className, defaultValue}) => {
     >
       <div className='flex-1 relative'>
         <SearchInput
+          data-testid='Search__SearchInput'
           onChange={handleChange}
           onKeyUp={handleKeyUp}
           placeholder='Search a block hash'
@@ -49,6 +50,7 @@ const Search = ({className, defaultValue}) => {
         />
 
         <ClearButton
+          data-testid='Search__ClearButton'
           onClick={handleClear}
           className={cn({
             'hidden': value.length <= 0,
@@ -58,6 +60,7 @@ const Search = ({className, defaultValue}) => {
       </div>
 
       <SearchButton
+        data-testid='Search__SearchButton'
         className={cn({'bg-black text-white': value.length > 0})}
         onClick={handleSearch}
       />

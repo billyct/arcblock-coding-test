@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test TransactionSpent Component snapshot should correct 1`] = `
+<div>
+  <tooltip-component
+    content="Unspent"
+    data-testid="TransactionSpent__tooltip"
+    show="false"
+  >
+    <div
+      class="w-2 h-2 rounded-full bg-red-500"
+      data-testid="TransactionSpent__div"
+    />
+  </tooltip-component>
+</div>
+`;

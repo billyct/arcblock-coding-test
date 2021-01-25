@@ -28,6 +28,7 @@ const Tooltip = ({children, content, show}) => {
       </div>
       <div
         ref={tooltipRef}
+        data-testid='Tooltip__tooltip'
         className={cn(
           'bg-black opacity-80 text-white px-2 py-1 rounded text-xs leading-none absolute whitespace-nowrap',
           {

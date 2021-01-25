@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CoinbaseInput Component 1`] = `
+<div>
+  <div
+    class="py-2"
+  >
+    <div
+      class="uppercase font-bold bg-green-100 inline-block px-4 py-2"
+    >
+      Coinbase
+    </div>
+  </div>
+</div>
+`;

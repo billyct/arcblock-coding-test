@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hash Component 1`] = `
+<div>
+  <span
+    class="text-blue-500 cursor-pointer w-80 truncate text-sm hover:underline"
+  >
+    29d6a3540acfa0a950bef2bfdc75cd51c24390fd
+  </span>
+</div>
+`;

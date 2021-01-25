@@ -17,7 +17,8 @@ const PrevButton = () => {
 
   return (
     <IconButton
-      disabled={page <= 1}
+      data-testid='PrevButton__button'
+      disabled={page <= 1 || !page}
       onClick={handleClick}
       iconPlacement='left'
       icon={

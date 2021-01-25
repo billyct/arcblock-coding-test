@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test SummaryItem Component snapshot should correctly 1`] = `
+<div>
+  <div
+    class="flex justify-between items-start text-sm leading-loose px-6 py-2 hover:bg-gray-200"
+  >
+    <div
+      class="text-gray-600 w-24 flex-shrink-0 relative"
+      data-testid="SummaryItem__title"
+    >
+      <span>
+        a title
+      </span>
+      <div
+        class="px-2 py-1 bg-black rounded text-white left-0 absolute whitespace-nowrap z-10 hidden"
+        data-testid="SummaryItem__tip"
+      >
+        a tip
+      </div>
+    </div>
+    <div
+      class="break-all"
+    >
+      a children
+    </div>
+  </div>
+</div>
+`;

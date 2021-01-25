@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test IconButton Component with { icon: 'icon', children: 'button' } should render correct 1`] = `
+<div>
+  <button
+    class="flex items-center disabled:opacity-50"
+  >
+    <span
+      class="mx-2 font-bold"
+    >
+      button
+    </span>
+    icon
+  </button>
+</div>
+`;
+
+exports[`test IconButton Component with { icon: 'icon', iconPlacement: 'left', children: 'button' } should render correct 1`] = `
+<div>
+  <button
+    class="flex items-center disabled:opacity-50"
+  >
+    icon
+    <span
+      class="mx-2 font-bold"
+    >
+      button
+    </span>
+  </button>
+</div>
+`;

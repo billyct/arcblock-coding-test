@@ -1,6 +1,9 @@
-export const blockQuery = (hash) => `
-query GetBlock_${hash} {
-  block(hash: ${JSON.stringify(hash)}) {
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test queries blockQuery 1`] = `
+"
+query GetBlock_0 {
+  block(hash: 0) {
     hash
     height
     size
@@ -15,12 +18,14 @@ query GetBlock_${hash} {
     transactionsCount
   }
 }
-`
+"
+`;
 
-export const transactionsQuery = (hash, page) => `
-query GetTransactions_${hash}_${page} {
-  block(hash: ${JSON.stringify(hash)}) {
-    transactions(page: ${page}) {
+exports[`test queries transactionsQuery 1`] = `
+"
+query GetTransactions_0_1 {
+  block(hash: 0) {
+    transactions(page: 1) {
       hash
       time
       fee
@@ -53,4 +58,5 @@ query GetTransactions_${hash}_${page} {
     }
   }
 }
-`
+"
+`;

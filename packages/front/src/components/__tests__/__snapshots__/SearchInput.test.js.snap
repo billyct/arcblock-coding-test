@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test SearchInput Component should render correct 1`] = `
+<div>
+  <input
+    class="pl-4 pr-10 outline-none font-light h-full w-full"
+  />
+</div>
+`;

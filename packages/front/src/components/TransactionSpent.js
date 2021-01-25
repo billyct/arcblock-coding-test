@@ -9,10 +9,12 @@ const TransactionSpent = ({spent}) => {
 
   return (
     <Tooltip
+      data-testid='TransactionSpent__tooltip'
       show={show}
       content={spent? 'Spent': 'Unspent'}
     >
       <div
+        data-testid='TransactionSpent__div'
         onMouseEnter={() => setShow(true)}
         onMouseLeave={() => setShow(false)}
         className={cn('w-2 h-2 rounded-full', {

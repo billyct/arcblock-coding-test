@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OpReturnOutput Component 1`] = `
+<div>
+  <div
+    class="uppercase py-2 "
+  >
+    OP_RETURN
+  </div>
+</div>
+`;

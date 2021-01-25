@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Block Component with useBlock({ block: 'a block' }) should render correct 1`] = `
+<div>
+  <block-hash-component />
+  <block-summary-component />
+  <block-transactions-component />
+</div>
+`;
+
+exports[`test Block Component with useBlock({ block: undefined }) should render correct 1`] = `
+<div>
+  <loading-component />
+</div>
+`;
+
+exports[`test Block Component with useBlock({ error: { message: 'a error message' } }) should render correct 1`] = `
+<div>
+  <error-component>
+    a error message
+  </error-component>
+</div>
+`;

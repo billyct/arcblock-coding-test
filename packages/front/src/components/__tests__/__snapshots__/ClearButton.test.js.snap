@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ClearButton Component with { className: 'a_classname' } should render correct 1`] = `
+<div>
+  <button
+    class="absolute top-0 bottom-0 right-4 text-gray-500 outline-none focus:outline-none a_classname"
+  >
+    <svg
+      height="12"
+      width="12"
+    >
+      close.svg
+    </svg>
+  </button>
+</div>
+`;
+
+exports[`ClearButton Component with {} should render correct 1`] = `
+<div>
+  <button
+    class="absolute top-0 bottom-0 right-4 text-gray-500 outline-none focus:outline-none"
+  >
+    <svg
+      height="12"
+      width="12"
+    >
+      close.svg
+    </svg>
+  </button>
+</div>
+`;

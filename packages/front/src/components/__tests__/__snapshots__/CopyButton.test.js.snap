@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test CopyButton Component should render correct 1`] = `
+<div>
+  <tooltip-component
+    content="Copy Hash"
+    data-testid="CopyButton__Tooltip"
+    show="false"
+  >
+    <button
+      data-testid="CopyButton__button"
+    >
+      <svg
+        height="14"
+        width="14"
+      >
+        clipboard.svg
+      </svg>
+    </button>
+  </tooltip-component>
+</div>
+`;

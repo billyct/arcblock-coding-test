@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Component 1`] = `
+<div>
+  <div
+    class="text-center my-10"
+  >
+    <div
+      class="text-4xl font-bold"
+    >
+      Oops!
+    </div>
+    <div
+      class="mt-10"
+    >
+      an error message
+    </div>
+    <div
+      class="text-sm mt-10"
+    >
+      There are some links maybe helpful:
+      <a
+        class="ml-2 text-blue-500"
+        href="/"
+      >
+        Explorer
+      </a>
+    </div>
+  </div>
+</div>
+`;

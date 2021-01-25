@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Paginate Component with useBlock({ block: { transactionsCount: 8 } }) should render correct 1`] = `<div />`;
+
+exports[`test Paginate Component with useBlock({ block: { transactionsCount: 2000 } }) should render correct 1`] = `
+<div>
+  <div
+    class="flex justify-between p-6 pb-0 border-t border-gray-200"
+  >
+    <div>
+      Showing 
+      91
+       to 
+      100
+       of 
+      2000
+       results
+    </div>
+    <div
+      class="flex justify-end items-center"
+    >
+      <prev-button-component />
+      <div
+        class="border-r-2 border-gray-200 mx-2 inline-block h-4 "
+      />
+      <next-button-component />
+    </div>
+  </div>
+</div>
+`;

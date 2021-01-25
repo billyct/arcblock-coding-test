@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test BlockSummary Component with useBlock({
+  block: {
+    bits: 486604799,
+    fee: '0',
+    hash: '000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f',
+    height: 0,
+    mrklRoot: '4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b',
+    nonce: 2083236893,
+    reward: '5000000000',
+    size: 285,
+    time: 1231006505,
+    transactionsCount: 1,
+    version: 1,
+    weight: 1140
+  }
+}) should render correct 1`] = `
+<div>
+  <card-component
+    classname="-mx-6 flex"
+    title="Summary"
+  >
+    <div
+      class="w-1/3 border-r border-gray-200"
+    >
+      <summary-item-component
+        tip="Number of blocks connected on the blockchain"
+        title="Height"
+      >
+        0
+      </summary-item-component>
+      <summary-item-component
+        tip="Total size of the block"
+        title="Block Size"
+      >
+        285
+         Bytes
+      </summary-item-component>
+      <summary-item-component
+        tip="A measurement to compare the size of different transactions to each other in proportion to the block size limit"
+        title="Weight"
+      >
+        1,140
+         WU
+      </summary-item-component>
+      <summary-item-component
+        title="Time"
+      >
+        2009-01-04 02:15:05
+      </summary-item-component>
+      <summary-item-component
+        tip="A sub-unit of BTC, equal to 0.000001 BTC"
+        title="Bits"
+      >
+        486,604,799
+      </summary-item-component>
+    </div>
+    <div
+      class="flex-1"
+    >
+      <summary-item-component
+        tip="Amount of transaction fees rewarded to the miner for calculating the hash for this block"
+        title="Fee Reward"
+      >
+        0 BTC
+      </summary-item-component>
+      <summary-item-component
+        tip="Static reward for the miner who calculated the hash for this block"
+        title="Block Reward"
+      >
+        50.00000000 BTC
+      </summary-item-component>
+      <summary-item-component
+        tip="Random value that can be adjusted to satisfy the proof of work"
+        title="Nonce"
+      >
+        2,083,236,893
+      </summary-item-component>
+      <summary-item-component
+        tip="The root node of a merkle tree, a descendant of all the hashed pairs in the tree"
+        title="Merkle root"
+      >
+        <span
+          class="text-blue-500 cursor-pointer w-80 truncate text-sm hover:underline"
+        >
+          4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b
+        </span>
+      </summary-item-component>
+      <summary-item-component
+        tip="Block version related to protocol proposals underway"
+        title="Version"
+      >
+        <span>
+          1
+          <sub>
+            10
+          </sub>
+        </span>
+        <span
+          class="ml-2"
+        >
+          0x
+          1
+          <sub>
+            16
+          </sub>
+        </span>
+      </summary-item-component>
+    </div>
+  </card-component>
+</div>
+`;
+
+exports[`test BlockSummary Component with useBlock({ block: undefined }) should render correct 1`] = `<div />`;

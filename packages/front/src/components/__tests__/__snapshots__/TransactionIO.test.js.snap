@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test TransactionIO Component case 0 should render correct 1`] = `
+<div>
+  <div
+    class="flex justify-between py-2"
+  >
+    <hash-component>
+      address 1
+    </hash-component>
+    <div
+      class="flex"
+    >
+      <div
+        class="mr-2"
+      >
+        5000.00000000 BTC
+      </div>
+      <transaction-spent-component
+        spent="true"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`test TransactionIO Component case 1 should render correct 1`] = `
+<div>
+  <div
+    class="flex justify-between py-2"
+  >
+    <hash-component>
+      address 2
+    </hash-component>
+    <div
+      class="flex"
+    >
+      <div
+        class="mr-2"
+      >
+        5000.00000000 BTC
+      </div>
+      <transaction-spent-component
+        spent="false"
+      />
+    </div>
+  </div>
+</div>
+`;

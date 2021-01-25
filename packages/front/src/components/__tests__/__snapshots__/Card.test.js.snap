@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Card Component with { title: 'title' } should render correct 1`] = `
+<div>
+  <div
+    class="rounded shadow  py-6 bg-white mb-4"
+  >
+    <h3
+      class="text-xl mb-4 px-6"
+    >
+      title
+    </h3>
+    <div
+      class="px-6"
+    />
+  </div>
+</div>
+`;
+
+exports[`test Card Component with { title: 'title', className: 'classname', children: 'children' } should render correct 1`] = `
+<div>
+  <div
+    class="rounded shadow  py-6 bg-white mb-4"
+  >
+    <h3
+      class="text-xl mb-4 px-6"
+    >
+      title
+    </h3>
+    <div
+      class="px-6 classname"
+    >
+      children
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test BlockTransactions Component with useBlock({ block: { transactionsCount: 2000 } }) useTransactions({
+  transactions: [ { hash: 'hash 1' }, { hash: 'hash 2' }, [length]: 2 ]
+}) should render correct 1`] = `
+<div>
+  <card-component
+    classname="-mx-6"
+    title="Transactions (2000)"
+  >
+    <transaction-item-component
+      transaction="[object Object]"
+    />
+    <transaction-item-component
+      transaction="[object Object]"
+    />
+    <paginate-component />
+  </card-component>
+</div>
+`;
+
+exports[`test BlockTransactions Component with useBlock({ block: { transactionsCount: 2000 } }) useTransactions({ transactions: undefined }) should render correct 1`] = `
+<div>
+  <card-component
+    classname="-mx-6"
+    title="Transactions (2000)"
+  >
+    <loading-component />
+    <paginate-component />
+  </card-component>
+</div>
+`;
+
+exports[`test BlockTransactions Component with useBlock({ block: undefined }) useTransactions({ transactions: [ [length]: 0 ] }) should render correct 1`] = `<div />`;

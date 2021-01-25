@@ -1,7 +1,8 @@
+import {useLocation} from 'wouter'
+
 import {ReactComponent as NextIcon} from '../assets/next.svg'
 import IconButton from './IconButton'
 import useBlockRouteParams from '../hooks/useBlockRouteParams'
-import {useLocation} from 'wouter'
 import useBlock from '../hooks/useBlock'
 
 const NextButton = () => {
@@ -23,6 +24,7 @@ const NextButton = () => {
 
   return (
     <IconButton
+      data-testid='NextButton__button'
       disabled={page >= pageTotal}
       onClick={handleClick}
       icon={

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Tooltip Component snapshot should correctly 1`] = `
+<div>
+  <div
+    class="relative"
+  >
+    <div
+      class="inline-block"
+    />
+    <div
+      class="bg-black opacity-80 text-white px-2 py-1 rounded text-xs leading-none absolute whitespace-nowrap invisible"
+      data-testid="Tooltip__tooltip"
+      style="top: -2px; left: 0px;"
+    >
+      a content
+      <div
+        class="w-2 h-2 transform rotate-45 absolute bg-black left-0 right-0 mx-auto"
+        style="z-index: -1; bottom: -2px;"
+      />
+    </div>
+  </div>
+</div>
+`;
