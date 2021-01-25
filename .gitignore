@@ -1,3 +1,4 @@
 .blocklet/
 .idea/
 node_modules/
+*.lock
