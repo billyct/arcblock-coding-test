@@ -1,7 +1,8 @@
 name: arcblock-coding-test
+main: packages/back/src/index.js
+version: 1.0.2
 description: ABT Node blocklet project
 group: dapp
-main: packages/back/src/index.js
 author:
   name: billyct
 specVersion: 1.0.0
@@ -17,8 +18,7 @@ interfaces:
     prefix: '*'
     port: BLOCKLET_PORT
     protocol: tcp
-did: z8iZw5Tjh8totj9THLqtHEMFPkoVZhRjXsnsw
-version: 1.0.0
+did: z8iZmNtggdxPyMJPXMWJEPtzr421UEV6Q7zB7
 community: ''
 documentation: ''
 homepage: ''
