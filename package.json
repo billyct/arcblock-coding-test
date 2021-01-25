@@ -7,6 +7,7 @@
     "build": "lerna run build --stream",
     "test": "lerna run test --stream",
     "postinstall": "lerna bootstrap",
+    "postversion": "blocklet version $npm_package_version",
     "clean": "rm -rf .blocklet build",
     "bundle": "yarn clean && yarn build && blocklet bundle --zip --create-release",
     "deploy": "yarn bundle && blocklet deploy .blocklet/bundle"
