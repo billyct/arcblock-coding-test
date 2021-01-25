@@ -1,6 +1,6 @@
 name: arcblock-coding-test
 main: packages/back/src/index.js
-version: 1.0.2
+version: 1.0.3
 description: ABT Node blocklet project
 group: dapp
 author:
