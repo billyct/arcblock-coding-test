@@ -31,6 +31,9 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:4000",
+  "jest": {
+    "globalSetup": "./src/globalSetup.js"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

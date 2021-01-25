@@ -84,7 +84,7 @@ exports[`test TransactionItem Component case 0 should render correct 1`] = `
     <div
       class="italic text-xs text-gray-500 px-6 py-2"
     >
-      2009-01-04 02:15:05
+      2009-01-03 18:15:05
     </div>
   </div>
 </div>
@@ -188,7 +188,7 @@ exports[`test TransactionItem Component case 1 should render correct 1`] = `
     <div
       class="italic text-xs text-gray-500 px-6 py-2"
     >
-      2021-01-21 16:24:42
+      2021-01-21 08:24:42
     </div>
   </div>
 </div>

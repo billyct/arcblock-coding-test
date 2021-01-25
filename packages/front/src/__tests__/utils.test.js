@@ -13,7 +13,7 @@ describe.each([
 })
 
 describe.each([
-  [1611217553, `2021-01-21 16:25:53`],
+  [1611217553, `2021-01-21 08:25:53`],
 ])(`test formatTime(%i) function`, (time, expected) => {
   it(`should return ${expected}`, () => {
     expect(formatTime(time)).toBe(expected)
