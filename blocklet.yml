@@ -9,6 +9,7 @@ files:
   - blocklet.md
   - screenshots
   - packages/front/build
+  - packages/back/src/graphql/schema.graphql
 interfaces:
   - type: web
     name: publicUrl
